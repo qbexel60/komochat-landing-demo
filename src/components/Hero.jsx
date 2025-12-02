@@ -1,5 +1,12 @@
 import { Button } from '@/components/ui/button.jsx';
-import { ArrowRight, Brain, Clock, Zap, CheckCircle2, MessageSquare } from 'lucide-react';
+import {
+  ArrowRight,
+  Brain,
+  Clock,
+  Zap,
+  CheckCircle2,
+  MessageSquare,
+} from 'lucide-react';
 import { motion } from 'framer-motion';
 import FacebookLogo from '../assests/facebook-logo.png';
 import InstagramLogo from '../assests/instagram.png';
@@ -33,7 +40,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-20 lg:pt-0"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-20 lg:pt-0 pb-20 lg:pb-24 2xl:pb-32"
     >
       {/* Abstract Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -53,7 +60,10 @@ const Hero = () => {
             className="text-center lg:text-left"
           >
             {/* Badge */}
-            <motion.div variants={itemVariants} className="flex justify-center lg:justify-start mb-6">
+            <motion.div
+              variants={itemVariants}
+              className="flex justify-center lg:justify-start mb-6"
+            >
               <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary-50 border border-primary-100 text-primary-700 text-sm font-medium shadow-sm">
                 <Zap className="w-3.5 h-3.5 mr-2 fill-primary-500 text-primary-500" />
                 Next-Gen Social Automation
@@ -66,9 +76,7 @@ const Hero = () => {
               className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 tracking-tight leading-[1.1] mb-6"
             >
               The AI Agent <br />
-              <span className="text-primary-600">
-                That Feels Human
-              </span>
+              <span className="text-primary-600">That Feels Human</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -76,8 +84,9 @@ const Hero = () => {
               variants={itemVariants}
               className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Transform your customer engagement with 24/7 intelligent automation.
-              It remembers context, understands nuance, and responds with genuine personality.
+              Transform your customer engagement with 24/7 intelligent
+              automation. It remembers context, understands nuance, and responds
+              with genuine personality.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -114,24 +123,53 @@ const Hero = () => {
             </motion.div>
 
             {/* Trust/Social Proof */}
-            <motion.div variants={itemVariants} className="border-t border-gray-200/60 pt-8">
+            <motion.div
+              variants={itemVariants}
+              className="border-t border-gray-200/60 pt-8"
+            >
               <p className="text-sm text-gray-500 font-medium mb-4 uppercase tracking-wider">
                 Seamlessly Integrates With
               </p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-4">
                 {[
-                  { name: 'Facebook', logo: FacebookLogo, color: 'text-blue-600', hoverColor: 'hover:text-blue-700' },
-                  { name: 'Instagram', logo: InstagramLogo, color: 'text-pink-600', hoverColor: 'hover:text-pink-700' },
-                  { name: 'WhatsApp', logo: WhatsAppLogo, color: 'text-green-600', hoverColor: 'hover:text-green-700' },
-                  { name: 'Messenger', logo: MessengerLogo, color: 'text-blue-500', hoverColor: 'hover:text-blue-600' },
+                  {
+                    name: 'Facebook',
+                    logo: FacebookLogo,
+                    color: 'text-blue-600',
+                    hoverColor: 'hover:text-blue-700',
+                  },
+                  {
+                    name: 'Instagram',
+                    logo: InstagramLogo,
+                    color: 'text-pink-600',
+                    hoverColor: 'hover:text-pink-700',
+                  },
+                  {
+                    name: 'WhatsApp',
+                    logo: WhatsAppLogo,
+                    color: 'text-green-600',
+                    hoverColor: 'hover:text-green-700',
+                  },
+                  {
+                    name: 'Messenger',
+                    logo: MessengerLogo,
+                    color: 'text-blue-500',
+                    hoverColor: 'hover:text-blue-600',
+                  },
                 ].map((platform) => (
                   <motion.div
                     key={platform.name}
                     whileHover={{ scale: 1.1, y: -2 }}
                     className={`flex items-center gap-2 p-3 rounded-xl bg-white/60 backdrop-blur-sm border border-gray-200/50 shadow-sm cursor-default ${platform.color} ${platform.hoverColor} transition-all duration-300`}
                   >
-                    <img src={platform.logo} alt={platform.name} className="w-6 h-6 object-contain" />
-                    <span className="text-sm font-semibold">{platform.name}</span>
+                    <img
+                      src={platform.logo}
+                      alt={platform.name}
+                      className="w-6 h-6 object-contain"
+                    />
+                    <span className="text-sm font-semibold">
+                      {platform.name}
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -142,7 +180,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
             className="relative hidden lg:block"
           >
             <div className="relative z-10 grid gap-6 max-w-md mx-auto">
@@ -155,9 +193,12 @@ const Hero = () => {
                   <Brain className="w-6 h-6 text-primary-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">Contextual Memory</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">
+                    Contextual Memory
+                  </h3>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Remembers past conversations and preferences for a continuous experience.
+                    Remembers past conversations and preferences for a
+                    continuous experience.
                   </p>
                 </div>
               </motion.div>
@@ -171,9 +212,12 @@ const Hero = () => {
                   <MessageSquare className="w-6 h-6 text-secondary-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">Natural Dialogue</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">
+                    Natural Dialogue
+                  </h3>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Uses advanced NLP to understand intent and respond like a human agent.
+                    Uses advanced NLP to understand intent and respond like a
+                    human agent.
                   </p>
                 </div>
               </motion.div>
@@ -187,14 +231,17 @@ const Hero = () => {
                   <Clock className="w-6 h-6 text-accent-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">24/7 Availability</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">
+                    24/7 Availability
+                  </h3>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Always on, handling thousands of conversations simultaneously without fatigue.
+                    Always on, handling thousands of conversations
+                    simultaneously without fatigue.
                   </p>
                 </div>
               </motion.div>
             </div>
-            
+
             {/* Decorative Elements behind cards */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary-50/30 rounded-full blur-3xl -z-10" />
           </motion.div>
