@@ -183,7 +183,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
             className="relative hidden lg:block"
           >
-            <div className="relative z-10 grid gap-6 max-w-md mx-auto">
+            <div className="relative z-10 grid gap-6 max-w-md ml-auto">
               {/* Feature Card 1 */}
               <motion.div
                 whileHover={{ y: -5, scale: 1.02 }}
